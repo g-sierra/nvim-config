@@ -4,18 +4,27 @@ return {
 		dependencies = { "rafamadriz/friendly-snippets" },
 		version = "1.*",
 		opts = {
-			keymap = { preset = "super-tab" },
+			keymap = {
+				preset = "super-tab",
+				["<C-d>"] = { "scroll_documentation_down", "fallback" },
+				["<C-u>"] = { "scroll_documentation_up", "fallback" },
+			},
 			appearance = {
 				nerd_font_variant = "mono",
 			},
 			completion = {
+				ghost_text = { enabled = true },
 				menu = {
 					border = "rounded",
-					winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+					winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
+					scrollbar = false,
 				},
 				documentation = {
+					auto_show = true,
+					auto_show_delay_ms = 200,
 					window = {
 						border = "rounded",
+						scrollbar = false,
 					},
 				},
 			},
@@ -23,11 +32,8 @@ return {
 				enabled = true,
 				window = {
 					border = "rounded",
-					treesitter_highlighting = true,
-					show_documentation = true,
 				},
 			},
-			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 	},
 }

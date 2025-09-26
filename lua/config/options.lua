@@ -3,7 +3,7 @@ vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
 
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -33,3 +33,6 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
 
+vim.opt.signcolumn = "yes"
+
+vim.opt.winborder = "rounded"

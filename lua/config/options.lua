@@ -15,6 +15,9 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.breakindent = true
 
+vim.opt.wrap = false
+vim.opt.linebreak = true
+
 vim.opt.undofile = true
 
 vim.opt.updatetime = 250 -- Decrease update time

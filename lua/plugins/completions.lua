@@ -13,7 +13,6 @@ return {
         nerd_font_variant = "mono",
       },
       completion = {
-        ghost_text = { enabled = true },
         menu = {
           border = "rounded",
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",

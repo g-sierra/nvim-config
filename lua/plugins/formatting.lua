@@ -15,7 +15,6 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
       },
-      format_on_save = false,
     })
 
     vim.keymap.set({ "n", "v" }, "<leader>gf", function()

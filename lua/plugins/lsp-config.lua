@@ -10,7 +10,7 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "lua_ls", "ts_ls", "emmet_language_server", "html", "cssls" },
+      ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "emmet_language_server" },
       auto_install = true,
     },
   },
@@ -31,13 +31,13 @@ return {
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       vim.lsp.config("*", { capabilities = { capabilities } })
-      -- vim.lsp.enable({ "lua_ls", "ts_ls" })  -- this is called automatically by mason-lspconfig.nvim
 
       vim.diagnostic.config({ virtual_text = true })
 
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "gh", vim.lsp.buf.hover, {})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "[g]o to [d]efinition" })
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "[g]o to [r]eferences" })
+      vim.keymap.set("n", "gh", vim.lsp.buf.hover, { desc = "[g]et [h]over" })
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "[c]ode [a]ction" })
     end,
   },
 }

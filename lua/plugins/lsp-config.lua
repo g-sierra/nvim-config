@@ -4,6 +4,7 @@ return {
 		opts = {
 			ensure_installed = { "stylua", "prettier", "black", "isort" },
 			auto_install = true,
+			ui = { border = "rounded" },
 		},
 	},
 	{

@@ -9,7 +9,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- select all
-vim.keymap.set("n", "<leader>a", "ggVG")
+vim.keymap.set("n", "<leader>a", "ggVG", { desc = "select all" })
 
 -- source
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")

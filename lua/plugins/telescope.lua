@@ -12,8 +12,13 @@ return {
     },
     config = function()
       require("telescope").setup({
+        pickers = {
+          buffers = {
+            theme = "ivy",
+          },
+        },
         extensions = {
-          ["fzf"] = {},
+          fzf = {},
           ["ui-select"] = {
             require("telescope.themes").get_cursor(),
           },

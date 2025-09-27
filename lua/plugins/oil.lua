@@ -11,7 +11,13 @@ return {
       },
     },
     keys = {
-      { "<C-e>", "<cmd>Oil<CR>", desc = "open oil" },
+      {
+        "<C-e>",
+        function()
+          require("oil").toggle_float()
+        end,
+        desc = "open oil in parent directory"
+      },
     },
   },
   {

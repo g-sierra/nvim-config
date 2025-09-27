@@ -2,6 +2,56 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
+      {
+        "mason-org/mason.nvim",
+        opts = {
+          ui = {
+            border = "rounded",
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
+            },
+          },
+        },
+      },
+      {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {
+          ensure_installed = {
+            "lua_ls",
+            "ts_ls",
+            "html",
+            "cssls",
+            "emmet_language_server",
+          },
+          auto_install = true,
+        },
+      },
+      {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        opts = {
+          ensure_installed = {
+            "stylua",
+            "prettier",
+            "eslint_d",
+            "black",
+            "isort",
+            "pylint",
+          },
+          auto_install = true,
+        },
+      },
+      {
+        "j-hui/fidget.nvim",
+        opts = {
+          notification = {
+            window = {
+              winblend = 0,
+            },
+          },
+        },
+      },
       "saghen/blink.cmp",
       {
         "folke/lazydev.nvim",

@@ -65,5 +65,11 @@ return {
         virtualtext_mode = "foreground",
       },
     },
+    keys = {
+      { "<leader>cc", "<cmd>ColorizerToggle<CR>", desc = "Toggle Colorizer" },
+      { "<leader>cr", "<cmd>ColorizerReloadAllBuffers<CR>", desc = "Reload Colorizer" },
+      { "<leader>ca", "<cmd>ColorizerAttachToBuffer<CR>", desc = "Attach Colorizer to Buffer" },
+      { "<leader>cd", "<cmd>ColorizerDetachFromBuffer<CR>", desc = "Detach Colorizer from Buffer" },
+    },
   },
 }

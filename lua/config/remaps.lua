@@ -6,13 +6,13 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- keep cursor in place when joining lines
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines"})
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines" })
 
 -- stay centered when moving around
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down"})
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up"})
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result"})
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result"})
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
 
 -- split navigation
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -34,3 +34,10 @@ vim.keymap.set("v", "<leader>x", ":lua<CR>")
 
 -- toggle word wrap
 vim.keymap.set("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle Word Wrap" })
+
+-- terminal keymaps
+vim.keymap.set("n", "<leader>ts", function()
+  vim.cmd.new()
+  vim.cmd.term()
+  vim.api.nvim_win_set_height(0, 10)
+end, { desc = "Open terminal below" })

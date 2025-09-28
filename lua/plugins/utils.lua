@@ -42,6 +42,7 @@ return {
         end,
         desc = "Buffer Local Keymaps (which-key)",
       },
+      { "<leader>ww", "<cmd>WhichKey<cr>", desc = "All Keymaps (which-key)" },
     },
   },
 }

@@ -21,8 +21,8 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- quickfix navigation
-vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>zz", { desc = "Next item in the quickfix list" })
-vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>zz", { desc = "Previous item in the quickfix list" })
+vim.keymap.set("n", "<M-n>", "<cmd>cnext<CR>zz", { desc = "Next item in the quickfix list" })
+vim.keymap.set("n", "<M-p>", "<cmd>cprev<CR>zz", { desc = "Previous item in the quickfix list" })
 
 -- select all
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select All" })

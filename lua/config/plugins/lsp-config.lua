@@ -50,7 +50,7 @@ return {
 
           map("K", vim.lsp.buf.hover, "Hover Documentation")
           map("<leader>rn", vim.lsp.buf.rename, "Rename")
-          map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
+          map("<leader>gca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
           map("<leader>gr", require("telescope.builtin").lsp_references, "Go to References")
           map("<leader>gi", require("telescope.builtin").lsp_implementations, "Go to Implementation")
           map("<leader>gd", require("telescope.builtin").lsp_definitions, "Go to Definition")

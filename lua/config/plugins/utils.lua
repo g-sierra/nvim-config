@@ -45,4 +45,10 @@ return {
       { "<leader>ww", "<cmd>WhichKey<cr>", desc = "All Keymaps (which-key)" },
     },
   },
+  {
+    "lewis6991/gitsigns.nvim",
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+  },
 }

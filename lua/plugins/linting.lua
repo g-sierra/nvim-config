@@ -18,6 +18,6 @@ return {
 
     vim.keymap.set("n", "<leader>gl", function()
       lint.try_lint()
-    end, { desc = "[g]et [l]inting" })
+    end, { desc = "Lint File" })
   end,
 }

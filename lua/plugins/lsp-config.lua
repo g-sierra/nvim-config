@@ -47,17 +47,18 @@ return {
             mode = mode or "n"
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
           end
-          map("<leader>rn", vim.lsp.buf.rename, "[r]e[n]ame")
-          map("<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction", { "n", "x" })
-          map("<leader>gr", require("telescope.builtin").lsp_references, "[g]o to [r]eferences")
-          map("<leader>gi", require("telescope.builtin").lsp_implementations, "[g]o to [i]mplementation")
-          map("<leader>gd", require("telescope.builtin").lsp_definitions, "[g]o to [d]efinition")
-          map("<leader>gD", vim.lsp.buf.declaration, "[g]o to [D]eclaration")
+
+          map("K", vim.lsp.buf.hover, "Hover Documentation")
+          map("<leader>rn", vim.lsp.buf.rename, "Rename")
+          map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
+          map("<leader>gr", require("telescope.builtin").lsp_references, "Go to References")
+          map("<leader>gi", require("telescope.builtin").lsp_implementations, "Go to Implementation")
+          map("<leader>gd", require("telescope.builtin").lsp_definitions, "Go to Definition")
+          map("<leader>gD", vim.lsp.buf.declaration, "Go to Declaration")
           map("<leader>gO", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
           map("<leader>gW", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
-          map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "[g]oto [t]ype definition")
-          map("<leader>gh", vim.lsp.buf.hover, "[g]et [h]over")
-          map("<leader>df", vim.diagnostic.open_float, "open [d]iagnostic [f]loat")
+          map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "Go to Type Definition")
+          map("<leader>df", vim.diagnostic.open_float, "Open Diagnostic Float")
 
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client

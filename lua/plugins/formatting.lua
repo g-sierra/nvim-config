@@ -23,6 +23,6 @@ return {
         async = false,
         timeout_ms = 500,
       })
-    end, { desc = "format file (Normal) or range (Visual)" })
+    end, { desc = "Format File (n) or Range (v)" })
   end,
 }

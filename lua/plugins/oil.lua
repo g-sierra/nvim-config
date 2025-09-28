@@ -19,7 +19,7 @@ return {
         function()
           require("oil").toggle_float()
         end,
-        desc = "open oil in parent directory",
+        desc = "Open Oil",
       },
     },
   },

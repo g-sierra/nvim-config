@@ -36,7 +36,7 @@ vim.opt.splitbelow = true
 
 vim.opt.inccommand = "split" -- Preview substitutions live, as you type!
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.cursorline = true

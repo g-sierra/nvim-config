@@ -44,4 +44,15 @@ vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 
-vim.opt.shell = "pwsh.exe"
+vim.opt.shell = (function()
+  local uname = vim.loop.os_uname().sysname
+  if uname == "Windows_NT" then
+    return "pwsh"
+  elseif vim.fn.executable("zsh") == 1 then
+    return "zsh"
+  elseif vim.fn.executable("bash") == 1 then
+    return "bash"
+  else
+    return "/bin/sh"
+  end
+end)()

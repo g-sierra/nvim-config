@@ -16,6 +16,18 @@ return {
           buffers = {
             theme = "ivy",
           },
+          lsp_references = {
+            theme = "dropdown",
+          },
+          lsp_definitions = {
+            theme = "dropdown",
+          },
+          lsp_document_symbols = {
+            theme = "dropdown",
+          },
+          lsp_dynamic_workspace_symbols = {
+            theme = "dropdown",
+          },
         },
         extensions = {
           fzf = {},

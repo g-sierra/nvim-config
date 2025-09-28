@@ -48,3 +48,5 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
+
+vim.opt.shell = "pwsh.exe"

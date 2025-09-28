@@ -51,4 +51,19 @@ return {
   {
     "ThePrimeagen/vim-be-good",
   },
+  {
+    "catgoose/nvim-colorizer.lua",
+    event = "BufReadPre",
+    opts = {
+      filetypes = { "*" },
+      user_default_options = {
+        css = true,
+        css_fn = true,
+        mode = "background",
+        virtualtext = "■",
+        virtualtext_inline = true,
+        virtualtext_mode = "foreground",
+      },
+    },
+  },
 }

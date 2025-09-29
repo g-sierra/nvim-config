@@ -213,9 +213,6 @@ return {
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
       }
-
-      lint.linters.eslint_d.args = { "--config", os.getenv("HOME") .. "/.config/eslint/eslintrc.json" }
-
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
         group = lint_augroup,

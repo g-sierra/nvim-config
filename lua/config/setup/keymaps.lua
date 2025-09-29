@@ -34,8 +34,6 @@ vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select All" })
 
 -- source
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
-vim.keymap.set("n", "<leader>x", ":.lua<CR>")
-vim.keymap.set("v", "<leader>x", ":lua<CR>")
 
 -- toggle word wrap
 vim.keymap.set("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle Word Wrap" })

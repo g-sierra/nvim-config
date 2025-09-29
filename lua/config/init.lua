@@ -1,4 +1,4 @@
 require("config.setup.options")
-require("config.setup.remaps")
+require("config.setup.keymaps")
 require("config.lazy_init")
 require("config.setup.autocmd")

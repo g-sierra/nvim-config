@@ -49,16 +49,15 @@ return {
           end
 
           map("K", vim.lsp.buf.hover, "Hover Documentation")
-          map("<leader>rn", vim.lsp.buf.rename, "Rename")
-          map("<leader>gca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
-          map("<leader>gr", require("telescope.builtin").lsp_references, "Go to References")
-          map("<leader>gi", require("telescope.builtin").lsp_implementations, "Go to Implementation")
-          map("<leader>gd", require("telescope.builtin").lsp_definitions, "Go to Definition")
-          map("<leader>gD", vim.lsp.buf.declaration, "Go to Declaration")
-          map("<leader>gO", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
-          map("<leader>gW", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
-          map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "Go to Type Definition")
-          map("<leader>df", vim.diagnostic.open_float, "Open Diagnostic Float")
+          map("grn", vim.lsp.buf.rename, "Rename")
+          map("gra", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
+          map("grr", require("telescope.builtin").lsp_references, "Go to References")
+          map("gri", require("telescope.builtin").lsp_implementations, "Go to Implementation")
+          map("grd", require("telescope.builtin").lsp_definitions, "Go to Definition")
+          map("grD", vim.lsp.buf.declaration, "Go to Declaration")
+          map("gO", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
+          map("gW", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
+          map("grt", require("telescope.builtin").lsp_type_definitions, "Go to Type Definition")
 
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client

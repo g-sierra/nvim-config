@@ -47,6 +47,24 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
+    opts = {
+      signs = {
+        delete = { show_count = true },
+        topdelete = { show_count = true },
+      },
+      count_chars = {
+      [1]   = "₁",
+      [2]   = "₂",
+      [3]   = "₃",
+      [4]   = "₄",
+      [5]   = "₅",
+      [6]   = "₆",
+      [7]   = "₇",
+      [8]   = "₈",
+      [9]   = "₉",
+      ["+"] = "∙", -- shown when count ≥ 10
+    },
+    },
   },
   {
     "ThePrimeagen/vim-be-good",

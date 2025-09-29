@@ -23,6 +23,6 @@ return {
         async = false,
         timeout_ms = 500,
       })
-    end, { desc = "Format File (n) or Range (v)" })
+    end, { desc = "LSP: Format File (n) or Range (v)" })
   end,
 }

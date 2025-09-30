@@ -215,27 +215,6 @@ return {
         typescript = { "eslint_d" },
       }
 
-      local function eslint_args()
-        local bufname = vim.api.nvim_buf_get_name(0)
-        local cwd = vim.fn.getcwd()
-        local global_config = vim.fn.expand("~/.config/eslint/eslint.config.cjs")
-        local local_config = vim.fn.globpath(cwd, "{.eslintrc,.eslintrc.js,.eslintrc.cjs,.eslintrc.json}")
-        local args = {
-          "--stdin",
-          "--stdin-filename", bufname,
-          "--ext", ".js,.ts,.jsx,.tsx,.html",
-          "--format", "json",
-        }
-        -- If a local config file is not found, use the global config
-        if local_config == "" then
-          table.insert(args, "--config")
-          table.insert(args, global_config)
-        end
-        return args
-      end
-
-      lint.linters.eslint_d.args = eslint_args()
-
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
         group = lint_augroup,

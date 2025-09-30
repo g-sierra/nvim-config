@@ -28,4 +28,9 @@ return {
     dependencies = { "stevearc/oil.nvim" },
     opts = {},
   },
+  {
+    "JezerM/oil-lsp-diagnostics.nvim",
+    dependencies = { "stevearc/oil.nvim" },
+    opts = {}
+}
 }

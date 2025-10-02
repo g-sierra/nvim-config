@@ -56,6 +56,7 @@ return {
       user_default_options = {
         css = true,
         css_fn = true,
+        names = false,
         mode = "background",
         virtualtext = "■",
         virtualtext_inline = true,

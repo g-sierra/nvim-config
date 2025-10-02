@@ -68,12 +68,12 @@ return {
         },
       },
       snippets = { preset = "luasnip" },
-      signature = {
-        enabled = true,
-        window = {
-          border = "rounded",
-        },
-      },
+      -- signature = {
+      --   enabled = true,
+      --   window = {
+      --     border = "rounded",
+      --   },
+      -- },
     },
   },
 }

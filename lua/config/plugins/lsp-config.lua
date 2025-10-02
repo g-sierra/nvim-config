@@ -193,7 +193,7 @@ return {
         },
       })
 
-      vim.keymap.set({ "n", "v" }, "<leader>gf", function()
+      vim.keymap.set({ "n", "v" }, "grf", function()
         conform.format({
           lsp_fallback = true,
           async = false,
@@ -223,7 +223,7 @@ return {
         end,
       })
 
-      vim.keymap.set("n", "<leader>gl", function()
+      vim.keymap.set("n", "grl", function()
         lint.try_lint()
       end, { desc = "LSP: Lint File" })
     end,

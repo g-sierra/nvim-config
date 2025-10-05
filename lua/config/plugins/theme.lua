@@ -32,16 +32,8 @@ return {
         dim_inactive = false,
         transparent_mode = true,
       })
-      SetColorscheme()
+      SetColorscheme("gruvbox")
     end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    opts = {},
-  },
-  {
-    "navarasu/onedark.nvim",
-    opts = { style = "warmer" },
   },
   {
     "nvim-lualine/lualine.nvim",

@@ -44,10 +44,18 @@ vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 
+vim.opt.guicursor = {
+  "n-v-c:block",
+  "i-ci-ve:ver25",
+  "r-cr:hor20",
+  "o:hor50",
+  "a:blinkon0" -- disables blinking
+}
+
 vim.opt.shell = (function()
   local uname = vim.loop.os_uname().sysname
   if uname == "Windows_NT" then
-    return "pwsh"
+    return "pwsh -NoLogo"
   elseif vim.fn.executable("zsh") == 1 then
     return "zsh"
   elseif vim.fn.executable("bash") == 1 then

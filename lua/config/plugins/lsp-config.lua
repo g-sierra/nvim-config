@@ -146,6 +146,7 @@ return {
         html = {},
         cssls = {},
         emmet_language_server = {},
+        clangd = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -156,6 +157,7 @@ return {
         "black",
         "isort",
         "pylint",
+        "clang-format",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

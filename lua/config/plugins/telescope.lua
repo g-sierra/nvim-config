@@ -1,7 +1,8 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    branch = "master",
+    -- tag = "0.1.8",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
@@ -14,6 +15,9 @@ return {
       require("telescope").setup({
         pickers = {
           buffers = {
+            theme = "ivy",
+          },
+          old_files = {
             theme = "ivy",
           },
           lsp_references = {
@@ -41,19 +45,20 @@ return {
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Telescope Find Files" })
       vim.keymap.set("n", "<leader>ff", builtin.git_files, { desc = "Telescope Git Files" })
+      vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Telescope Git Files" })
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope Live Grep" })
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope Buffers" })
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope Help Tags" })
 
-      vim.keymap.set('n', '<leader>fw', function()
-            local word = vim.fn.expand("<cword>")
-            builtin.grep_string({ search = word })
-        end, { desc = "Telescope Grep word" })
+      vim.keymap.set("n", "<leader>fw", function()
+        local word = vim.fn.expand("<cword>")
+        builtin.grep_string({ search = word })
+      end, { desc = "Telescope Grep word" })
 
-        vim.keymap.set('n', '<leader>fW', function()
-            local word = vim.fn.expand("<cWORD>")
-            builtin.grep_string({ search = word })
-        end, { desc = "Telescope Grep WORD" })
+      vim.keymap.set("n", "<leader>fW", function()
+        local word = vim.fn.expand("<cWORD>")
+        builtin.grep_string({ search = word })
+      end, { desc = "Telescope Grep WORD" })
 
       vim.keymap.set("n", "<leader>en", function()
         require("telescope.builtin").find_files({

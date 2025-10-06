@@ -30,7 +30,6 @@ local function create_floating_window(opts)
     col = col,
     row = row,
     style = "minimal", -- No borders or extra UI elements
-    border = "rounded",
   }
 
   -- Create the floating window

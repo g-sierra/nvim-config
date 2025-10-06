@@ -49,15 +49,11 @@ return {
       },
       completion = {
         menu = {
-          border = "rounded",
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
           scrollbar = false,
         },
         documentation = {
-          auto_show = false,
-          auto_show_delay_ms = 200,
           window = {
-            border = "rounded",
             scrollbar = false,
           },
         },
@@ -69,12 +65,6 @@ return {
         },
       },
       snippets = { preset = "luasnip" },
-      -- signature = {
-      --   enabled = true,
-      --   window = {
-      --     border = "rounded",
-      --   },
-      -- },
     },
   },
 }
